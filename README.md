@@ -74,7 +74,9 @@ Para continuarmos com nosso ataque, precisamos conquistar nosso primeiro "Zumbir
 
 Mas aqui vou abordar um ataque de infecção fisica, onde iremos ter acesso fisico a uma maquina e com a posse de um Digispark iremos infectar uma maquina. 
 
-Para quem não conhece o Digispark, ele é uma placa de desenvolvimento com tamanho reduzido e 6 pinos de I/O (entrada/saída), ideal para uso em projetos de IoT (Internet of Things ou Internet das Coisas) ou simplesmente para uso em projetos onde você não precisa de muitas portas do microcontrolador. 
+Para quem não conhece o Digispark, ele é uma placa de desenvolvimento com tamanho reduzido e 6 pinos de I/O (entrada/saída), ideal para uso em projetos de IoT (Internet of Things ou Internet das Coisas) ou simplesmente para uso em projetos onde você não precisa de muitas portas do microcontrolador.
+
+![](https://i.ytimg.com/vi/YXWxEzLHXuw/maxresdefault.jpg)
 
 Que chega ser um GENERICO ao Rubber duck(dispositivo esse usado na serie Mr. Robot) e pode ser programada com a IDE do Arduino. com isso configuraremos o Digispark para reconhecido como um teclado, qual não iremos precisar de nenhum tipo de permisão do usuario da maquina e iremos executar comandos de teclado para fazer o download do backdoor e execultar ele na maquina e adicionar ele junto a inicialização do Windows, para que quando a maquinar for reiniciar obtermos uma nova conexão com a mesma. 
 
@@ -108,6 +110,10 @@ depois de iniciado
     msf >set ExitOnSession false
 ```
 
+**Obter acesso a uma maquina infectada**
+
+Agora basta enviar o link para alguem ou plugar o digispark em alguma maquina e aguardar o primeiro a se juntar a sua rede de zumbis hahahaha
+
 para ficar na esculta em tempo real de quem se conectou ou disconectou rode
 ```shell
     msf > exploit -j -z
@@ -118,11 +124,24 @@ para ficar na esculta em tempo real de quem se conectou ou disconectou rode
 ```shell
 msf> sessions -l 
 ```
+você tera uma saida algo como
+
+![](https://s5.gifyu.com/images/sessionsL.png)
+
+
+
 e para acessar um "zumbir
 ```shell
 msf> sessions -i <numero da sessão> 
 ```
 
-**Obter acesso a uma maquina infectada**
+com isso você obtem acesso shell 
 
-Agora basta enviar o link para alguem ou plugar o digispark em alguma maquina e se divertir hahaha
+![](https://s5.gifyu.com/images/sessionsI.png)
+
+ 
+#### ** CONHECIMENTO NÃO É CRIME, CRIME É O QUE VOCÊ FAZ COM ELE. **
+
+#### **ENTÃO UTILIZE  O QUE APRENDEMOS AQUI PARA FINS DIDATICOS, PARA ZUAR UM AMIGO OU IRMÃO E RESPEITE A PRIVACIDADE DOS OUTROS**
+
+@despossivel
