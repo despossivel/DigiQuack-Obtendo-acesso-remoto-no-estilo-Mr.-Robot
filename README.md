@@ -63,13 +63,45 @@ PASSOS
 
 
 5 - Digispark
+    
+        Para continuarmos com nosso ataque, precisamos conquistar nosso primeiro "Zumbir".
+        Podemos fazer isso de varias formas envolvendo engenharia social entre elas as mais comuns, como enviar o nosso link para um amigo, ofuscado de tal forma que não levante suspeitas. 
+        
+        Mas aqui vou abordar um ataque de infecção fisica, onde iremos ter acesso fisico a uma maquina e com a posse de um Digispark iremos infectar uma maquina. 
+        Para quem não conhece o Digispark, ele é uma placa de desenvolvimento com tamanho reduzido e 6 pinos de I/O (entrada/saída), ideal para uso em projetos de IoT (Internet of Things ou Internet das Coisas) ou simplesmente para uso em projetos onde você não precisa de muitas portas do microcontrolador. 
+        
+        Que chega ser um GENERICO ao Rubber duck(dispositivo esse usado na serie Mr. Robot) e pode ser programada com a IDE do Arduino. 
+        
+        com isso configuraremos o Digispark para reconhecido como um teclado, qual não iremos precisar de nenhum tipo de permisão do usuario da maquina e iremos executar comandos de teclado para fazer o download do backdoor e execultar ele na maquina e adicionar ele junto a inicialização do Windows, para que quando a maquinar for reiniciar obtermos uma nova conexão com a mesma. 
+        
+        Agora bora lá, para isso você vai precisar de um Digispark ATtiny85 que pode ser encontrado no mercado livre por R$ 16 
+        
+        https://eletronicos.mercadolivre.com.br/pecas-componentes/arduino-digispark
+        
+        Com ele em mãos agora você vai precisar carregar neles os modulos de "teclado" transformando-o em um "rubbe duck" para isso você pode seguir os passos deste tutorial e voltar aqui
+        
+        https://aminbohio.com/creating-a-cheap-rubber-ducky-aka-bad-usb-with-attiny85/
+        
+        Talvez você enfrente problemas ao efetuar a injeção de payload no digispark para resolver isso você vai precisar configurar o uDev 
+        https://www.hardware.com.br/livros/ferramentas-linux/entendendo-udev.html
+         
 
+6 - Criar Payload para injectar o BACKDOOR 
 
+          Feito tudo isso e com o ARDUINO IDE instalado vamos criar o nosso Payload que ao pluggarmos em uma maquina vai fazer o download do backdoor, mover ele para a inicialização do windows, tentar desativar o windows defender e  execultar nosso backdoor, tudo isso em questão de segundos hahahahaha
+        
+        Abra o Arduino IDE e cole o payload que vou deixar aqui para vocês
+        
+        copiado e colado e entendido o que o payload faz, você pluga o digispark na porta USB da sua maquina e clicamos em verificar primeiro e depois em carregar e aguarde a IDE solicitar que você pluge o dispositivo
+        
+        E SUCESSO! Diggispark RUBBE DUCK esta criado. Agora basta plugar o digispark em qualquer maquina windows aguardar 4 segundos e remove-lo, tudo muito rapido. 
 
-
-
-6 - Criar Payload injectar o backdoor
 
 7 - INICIAR ESCULTA DAS CONEXOES DO BACKDOOR
+
+        Agora voltamos para a nossa instancia para iniciarmos a esculta do backdoor na nossa porta
+        
+    
+
 
 8 - Obter acesso a uma maquina infectada
