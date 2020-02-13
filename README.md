@@ -1,5 +1,4 @@
-PASSOS 
-
+ 
 1 - Criar uma INSTANCIA e definir um IP estatico
 
     Eu estarei utilizando o GCP(Google cloud platform) mas você pode utilizar o provedor de CLOUD que deseja ou até mesmo um VPS.
@@ -118,6 +117,12 @@ PASSOS
               
                 msf> sessions -l 
                 
-                para listar nossas conexões de entrada até o momento
+                para listar nossas conexões de entrada até o momento 
+                
+                e para acessar um "zumbir
+                
+                msf> sessions -i <numero da sessão> 
     
 8 - Obter acesso a uma maquina infectada
+
+    agora basta enviar o link para alguem ou plugar o digispark em alguma maquina e se divertir hahaha
