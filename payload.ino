@@ -77,6 +77,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_B, MOD_GUI_LEFT);
   digiEnd();
 }
-d
+
 /* Unused endless loop */
 void loop() {}
