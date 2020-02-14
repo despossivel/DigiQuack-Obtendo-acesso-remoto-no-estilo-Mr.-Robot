@@ -156,7 +156,7 @@ com isso você obtêm acesso shell.
 
 E é isso, agora você é portador desse conhecimento e como escreveu Stan Lee, Tio Ben, na obra o Homem Aranha.
 
-##### **"Com grandes poderes, vêm grandes responsabilidades."**
+#### **"Com grandes poderes, vêm grandes responsabilidades."**
 
  
 #### **CONHECIMENTO NÃO É CRIME, CRIME É O QUE VOCÊ FAZ COM ELE.**
