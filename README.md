@@ -154,6 +154,10 @@ com isso você obtêm acesso shell.
 
 ![](https://s5.gifyu.com/images/sessionsI.png)
 
+E é isso, agora você é portador desse conhecimento e como escreveu Stan Lee, Tio Ben, na obra o Homem Aranha.
+
+##### **"Com grandes poderes, vêm grandes responsabilidades."**
+
  
 #### **CONHECIMENTO NÃO É CRIME, CRIME É O QUE VOCÊ FAZ COM ELE.**
 
