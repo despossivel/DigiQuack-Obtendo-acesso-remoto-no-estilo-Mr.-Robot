@@ -2,7 +2,7 @@
 
 **Criar uma instancia e definir um IP estatico**
 
- Eu estarei utilizando o **GCP(Google cloud platform) **mas você pode utilizar o provedor de **CLOUD** que deseja ou até mesmo um VPS.
+ Eu estarei utilizando o **GCP(Google cloud platform)** mas você pode utilizar o provedor de **CLOUD** que deseja ou até mesmo um VPS.
 
 Acesso meu console e crio a instancia. Estancia essa que é bem basica, uma micro com SO Debian 9
 
