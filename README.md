@@ -86,7 +86,7 @@ Mas aqui vou abordar um **ataque de infecção físico**, onde vamos precisar te
 
 ![](https://i.ytimg.com/vi/YXWxEzLHXuw/maxresdefault.jpg)
 
-> *Poderíamos utilizar o **Rubber duck** *(dispositivo esse usado na serie Mr. Robot)* original, mas no Brasil é difícil encontramos e os poucos chegam a ser vendidos por precinho um pouco salgado.*
+> *Poderíamos utilizar o **Rubber duck** *(dispositivo esse usado na serie Mr. Robot)* original, mas no Brasil é difícil encontramos e os poucos chegam a ser vendidos por um precinho um pouco salgado.*
 
 O **Digispark** chega ser um genérico ao Rubber duck tem um desempenho inferior mas é uma alternativa acessível e viável para o nosso ataque e pode ser programada com a **IDE do Arduíno**. Com isso configuraremos o Digispark para ser reconhecido como um teclado, qual não iremos precisar de nenhum tipo de permissão do usuário da máquina, e iremos executar comandos de teclado para fazer o download do backdoor e executar ele na máquina, adicionando ele junto a inicialização do Windows, para que quando a máquina for reiniciada obtermos uma nova conexão.
 
